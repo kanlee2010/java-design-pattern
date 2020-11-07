@@ -1,4 +1,4 @@
-package adapter;
+package Adapter;
 
 public interface Adapter {
     public Float twiceOf(Float f);

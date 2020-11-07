@@ -1,4 +1,4 @@
-package adapter;
+package Adapter;
 
 public class Math {
     public static double twoTime(double num) {return num*2;}

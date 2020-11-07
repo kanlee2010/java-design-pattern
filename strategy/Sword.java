@@ -1,4 +1,4 @@
-package strategy;
+package Strategy;
 
 public class Sword implements Weapon {
     public void attack() {
