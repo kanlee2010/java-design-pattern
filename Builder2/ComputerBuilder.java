@@ -1,11 +1,12 @@
 package Builder2;
 
 public class ComputerBuilder {
+    private static final String DEFAULT = "default";
 
     private Computer computer;
 
     public ComputerBuilder() {
-        computer = new Computer("default", "default", "default");
+        computer = new Computer(DEFAULT, DEFAULT, DEFAULT);
     }
 
     public Computer build() {

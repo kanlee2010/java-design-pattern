@@ -10,7 +10,6 @@ public class AbstractAdding implements IBeverage {
 
     @Override
     public int getTotalPrice() {
-        // TODO Auto-generated method stub
         return base.getTotalPrice();
     }
 

@@ -1,9 +1,10 @@
 package Builder;
 
 public class LgGramBlueprint extends BluePrint {
-    
+    private static final String DEFAULT = "default";
+
     public LgGramBlueprint() {
-        computer = new Computer("default", "default", "default");
+        computer = new Computer(DEFAULT, DEFAULT, DEFAULT);
     }
 
     @Override

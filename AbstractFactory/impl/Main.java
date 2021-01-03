@@ -5,19 +5,19 @@ import AbstractFactory.frwk.Body;
 import AbstractFactory.frwk.Wheel;
 
 public class Main {
-    static public void main(String[] args) {
-      BikeFactory factory = new SamFactory();
-      Body body = factory.createBody();
-      Wheel wheel = factory.createWheel();
+  public static void main(String[] args) {
+    BikeFactory factory = new SamFactory();
+    Body body = factory.createBody();
+    Wheel wheel = factory.createWheel();
 
-      System.out.println(body.getClass());
-      System.out.println(wheel.getClass());
-      
-      factory = new GtFactory();
-      body = factory.createBody();
-      wheel = factory.createWheel();
+    System.out.println(body.getClass());
+    System.out.println(wheel.getClass());
 
-      System.out.println(body.getClass());
-      System.out.println(wheel.getClass());
-    }
+    factory = new GtFactory();
+    body = factory.createBody();
+    wheel = factory.createWheel();
+
+    System.out.println(body.getClass());
+    System.out.println(wheel.getClass());
+  }
 }

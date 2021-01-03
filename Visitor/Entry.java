@@ -3,7 +3,7 @@ package Visitor;
 public abstract class Entry implements Element {
     private String name;
 
-    public Entry(String name) {
+    protected Entry(String name) {
         this.name = name;
     }
 

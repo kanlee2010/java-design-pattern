@@ -10,7 +10,9 @@ public abstract class ItemCreator {
         return item;
     }
 
-    abstract protected void requestItemsInfo();
-    abstract protected void createItemLog();
-    abstract protected Item createItem();
+    protected abstract void requestItemsInfo();
+
+    protected abstract void createItemLog();
+
+    protected abstract Item createItem();
 }

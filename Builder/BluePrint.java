@@ -1,12 +1,15 @@
 package Builder;
 
-abstract public class BluePrint {
+public abstract class BluePrint {
 
     protected Computer computer;
 
-    abstract public void setCpu();
-    abstract public void setRam();
-    abstract public void setStorage();
+    public abstract void setCpu();
+
+    public abstract void setRam();
+
+    public abstract void setStorage();
+
     public Computer getComputer() {
         return computer;
     }

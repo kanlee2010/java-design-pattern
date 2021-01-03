@@ -8,8 +8,7 @@ public class Milk extends AbstractAdding {
 
     @Override
     public int getTotalPrice() {
-        // TODO Auto-generated method stub
         return super.getTotalPrice() + 50;
     }
-    
+
 }

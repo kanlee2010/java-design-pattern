@@ -12,6 +12,6 @@ public class File extends Entry {
     }
 
     @Override
-    public void add(Entry entry) {
+    public void add(Entry entry) { // Only for inheriting abstract
     }
 }
