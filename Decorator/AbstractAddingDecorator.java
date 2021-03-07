@@ -1,9 +1,9 @@
 package Decorator;
 
-public class AbstractAdding implements IBeverage {
+public class AbstractAddingDecorator implements IBeverage {
     private IBeverage base;
 
-    public AbstractAdding(IBeverage base) {
+    public AbstractAddingDecorator(IBeverage base) {
         super();
         this.base = base;
     }

@@ -1,6 +1,6 @@
 package Decorator;
 
-public class Milk extends AbstractAdding {
+public class Milk extends AbstractAddingDecorator {
 
     public Milk(IBeverage base) {
         super(base);

@@ -1,6 +1,6 @@
 package Decorator;
 
-public class Espresso extends AbstractAdding {
+public class Espresso extends AbstractAddingDecorator {
 
     protected static int espressoCount = 0;
 
