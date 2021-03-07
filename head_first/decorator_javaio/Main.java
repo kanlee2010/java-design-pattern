@@ -1,4 +1,4 @@
-package head_first.decorator.javaio;
+package head_first.decorator_javaio;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) {
         int c;
         try {
-            InputStream in = new LowerCaseInputStream(
-                    new BufferedInputStream(new FileInputStream("test.txt")));
+            InputStream in = new LowerCaseInputStream(new BufferedInputStream(
+                    new FileInputStream("./head_first/decorator_javaio/test.txt")));
             while ((c = in.read()) >= 0) {
                 System.out.print((char) c);
             }

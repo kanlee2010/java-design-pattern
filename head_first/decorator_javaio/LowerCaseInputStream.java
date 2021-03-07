@@ -1,4 +1,4 @@
-package head_first.decorator.javaio;
+package head_first.decorator_javaio;
 
 import java.io.FilterInputStream;
 import java.io.IOException;
