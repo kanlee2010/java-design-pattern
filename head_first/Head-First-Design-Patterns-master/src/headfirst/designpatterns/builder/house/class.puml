@@ -1,0 +1,41 @@
+@startuml
+class Roof {
+    +setName()
+    +toString()
+}
+class Wall {
+    +setName()
+    +toString()
+}
+Wall <|- InteriorWall
+class Window {
+    +setName()
+    +toString()
+}
+class House {
+    +setHouseType()
+    +addWalls()
+    +addRoof()
+    +addWindows()
+    +setName()
+    +toString()
+}
+Roof o-- House
+Wall o-- House
+Window o-- House
+abstract HouseBuilder {
+    +setHouseType()
+    +addWalls()
+    +addRoof()
+    +addWindows()
+    +build()
+}
+House <- HouseBuilder
+HouseBuilder <|- WoodHouseBuilder
+HouseBuilder <|- GingerbreadHouseBuilder
+HouseDirector -> WoodHouseBuilder
+HouseDirector -> StoneHouseBuilder
+HouseDirector -> GingerbreadHouseBuilder
+InteriorWall *-- WoodHouseBuilder
+InteriorWall *-- StoneHouseBuilder
+@enduml

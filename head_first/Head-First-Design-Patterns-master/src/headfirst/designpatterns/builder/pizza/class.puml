@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Pizza {
+    +prepare()
+    +bake()
+    +cut()
+    +box()
+    +setName()
+    +toString()
+}
+
+abstract PizzaBuilder {
+    +addCheese() : PizzaBuilder
+    +addSauce() : PizzaBuilder
+    +addTomatoes() : PizzaBuilder
+    +addGarlic() : PizzaBuilder
+    +addOlives() : PizzaBuilder
+    +addSpinach() : PizzaBuilder
+    +addPepperoni() : PizzaBuilder
+    +addSausage() : PizzaBuilder
+    +build() : Pizza
+}
+
+Pizza -- PizzaBuilder
+PizzaBuilder <|-- MeatLoversPizzaBuilder
+PizzaBuilder <|-- VeggieLoversPizzaBuilder
+
+
+@enduml

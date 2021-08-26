@@ -1,0 +1,19 @@
+@startuml
+actor java
+java -> PizzaDirector : main
+create VeggieLoversPizzaBuilder
+PizzaDirector -> VeggieLoversPizzaBuilder : new
+PizzaDirector -> VeggieLoversPizzaBuilder : addSauce
+PizzaDirector -> VeggieLoversPizzaBuilder : addCheese
+PizzaDirector -> VeggieLoversPizzaBuilder : addOlives
+PizzaDirector -> VeggieLoversPizzaBuilder : addTomatoes
+PizzaDirector -> VeggieLoversPizzaBuilder : addSausage
+PizzaDirector -> VeggieLoversPizzaBuilder : build
+create Pizza
+VeggieLoversPizzaBuilder -> Pizza : new
+PizzaDirector <-  VeggieLoversPizzaBuilder : return pizza
+PizzaDirector -> Pizza : prepare
+PizzaDirector -> Pizza : bake
+PizzaDirector -> Pizza : cut
+PizzaDirector -> Pizza : box
+@enduml

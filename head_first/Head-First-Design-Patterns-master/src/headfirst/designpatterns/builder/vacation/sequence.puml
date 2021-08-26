@@ -1,0 +1,23 @@
+@startuml
+actor VacationDirector
+VacationDirector -> OutdoorsVacationBuilder : addAccommodation
+create Reservation
+OutdoorsVacationBuilder -> Reservation : new
+OutdoorsVacationBuilder -> Reservation : setArrivalDate
+OutdoorsVacationBuilder -> Reservation : setNights
+create Tent
+OutdoorsVacationBuilder -> Tent : new
+OutdoorsVacationBuilder -> Tent : setReservation
+OutdoorsVacationBuilder -> Tent : setSiteNumber
+OutdoorsVacationBuilder -> OutdoorsVacationBuilder : accommodations.add
+VacationDirector -> OutdoorsVacationBuilder : addEvent
+VacationDirector -> OutdoorsVacationBuilder : addAccommodation
+VacationDirector -> OutdoorsVacationBuilder : addEvent
+VacationDirector -> OutdoorsVacationBuilder : getVacation
+create Vacation
+OutdoorsVacationBuilder -> Vacation : new
+OutdoorsVacationBuilder -> Vacation : setName
+OutdoorsVacationBuilder -> Vacation : setAccommodations
+OutdoorsVacationBuilder -> Vacation : setEvents
+VacationDirector <- OutdoorsVacationBuilder : return vacation
+@enduml

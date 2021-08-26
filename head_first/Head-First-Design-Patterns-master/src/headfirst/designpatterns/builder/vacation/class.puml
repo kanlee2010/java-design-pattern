@@ -1,0 +1,33 @@
+@startuml
+abstract Accommodation {
+    +setReservation()
+    +getReservation()
+    +getLocation()
+}
+Accommodation <|- Tent
+Accommodation <|- Hotel
+class Vacation {
+    +setName()
+    +setAccommodations()
+    +setEvents()
+}
+class Reservation {
+    +setArrivalDate()
+    +getArrivalDate()
+    +setNights()
+    +getNights()
+}
+abstract VacationBuilder {
+    -accommodations: List<Accommodation>
+    -events
+    +addAccommodation()
+    +addEvent()
+    +getVacation()
+}
+VacationBuilder -> Reservation
+VacationBuilder -> Vacation
+VacationBuilder -> Tent
+VacationBuilder -> Hotel
+VacationBuilder <|- OutdoorsVacationBuilder
+VacationBuilder <|- CityVacationBuilder
+@enduml
